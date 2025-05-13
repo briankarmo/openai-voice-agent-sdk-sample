@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:next": "next dev --turbo",
-    "dev:server": "cd ../server && uv run server.py",
-    "dev": "concurrently \"npm run dev:next\" \"npm run dev:server\"",
-    "build": "next build",
-    "start": "next start",
+    "dev:next": "node init && next dev --turbo",
+    "dev:server": "node init && cd ../server && uv run server.py",
+    "dev": "node init && concurrently \"npm run dev:next\" \"npm run dev:server\"",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "next lint"
   },
   "dependencies": {
